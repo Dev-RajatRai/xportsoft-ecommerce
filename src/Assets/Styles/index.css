@@ -1,0 +1,48 @@
+/*                 default css                   */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-grid {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+
+/*              NAVBAR COMPONENT         */
+nav {
+    background: linear-gradient(90deg, #591a33, #2548b8, #2548b8);
+    color: white;
+}
+
+.navbar {
+    padding: 10px 15px 0;
+}
+
+
+.logo {
+    width: 192px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu {
+    margin: 6px;
+}
+
+.menu span {
+    border-bottom: 3px solid;
+    display: block;
+    width: 22px;
+    padding: 1.5px;
+}
+
+.nav-links ul .nav-link {
+    display: inline-block;
+}
