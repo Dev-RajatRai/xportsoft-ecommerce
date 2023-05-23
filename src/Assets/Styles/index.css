@@ -7,29 +7,92 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #274472;
+    --secondary-color: #3082b5;
+    --tertiary-color: #5593ba;
+
+}
+
 .d-grid {
     display: grid;
     grid-auto-flow: column;
+    align-items: center;
+}
+
+.d-flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+.j-center {
+    justify-self: center;
+}
+
+.btn {
+    border: none;
+    background: transparent;
 }
 
 
 /*              NAVBAR COMPONENT         */
 nav {
-    background: linear-gradient(90deg, #591a33, #2548b8, #2548b8);
-    color: white;
+    background: var(--secondary-color);
+    color: aliceblue;
 }
 
-.navbar {
-    padding: 10px 15px 0;
+nav::before {
+    content: "";
+    width: 100%;
+    border-top: 1px solid white;
+    height: 2px;
+    display: block;
 }
 
+section.navbar {
+    padding: 12px 0 0px;
+}
+
+.top-nav {
+    padding: 0px 20px 0px;
+    grid-template-columns: 15% 13% 48% 6% 6% 12%;
+}
 
 .logo {
-    width: 192px;
+    width: 166px;
 }
 
 .logo img {
     width: 100%;
+    height: 100%;
+}
+
+.searchBar {
+    height: 100%;
+}
+
+.searchBar input[type="search"] {
+    width: 100%;
+    padding: 1px 2px 2px;
+    height: 100%;
+}
+
+.searchBar span {
+    background: goldenrod;
+    display: inline-block;
+    width: 33px;
+    text-align: center;
+    height: 100%;
+    line-height: 31px;
+    font-size: 15px;
+    color: black;
+    font-weight: 550;
+}
+
+.search {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABTUlEQVR4nJ3UvU5UURTF8REtIBAswIREY6aYgsLQ0jglT0AyjwANRN8AWzoSBLSgUIjy0VFMI4GxoDOCETo7CkJNY2LCz5ywjTeZc7kDq7rJ3vnvdfbaubVaQRjADPZwih/4jBb6ar0IL3GOS6xgHq/wEVc4RqMXyG+sYShTH0M7htTLIAPhZK1i2CPso1PWMBuTupxkehv4g2aumBa7Gt8veoAdYjFX+Ik5DGOpB9Bb7OYKKY3XeBa76q8Avcd2rrAVET/ArypX+IY3uUIr7iRFPBXL3MDTTO8krjGRAz2M57Uj4tR8gAusYzz6HuMMO1WxXsaddF2vG3iCJH3ANAbLYHV8jad1sIx3sZP0nE/Y9F/fMXKbu2a6kxRxBLHw775in0WllYyWwm4ZMhhOikp/iHvBRsJJUV/uDArYKE4KoKN7gQL2JDlJEDz/C9Ju+sxPZnTnAAAAAElFTkSuQmCC) no-repeat 10px;
+    width: 44px;
+    height: 100%;
 }
 
 .menu {
@@ -43,6 +106,22 @@ nav {
     padding: 1.5px;
 }
 
+.bottom-nav {
+    height: 52px;
+    background: var(--tertiary-color);
+    color: white;
+    box-shadow: inset 0px 2px 4px 0px black;
+    margin: 12px 0 0;
+    padding: 0 20px 0;
+}
+
 .nav-links ul .nav-link {
     display: inline-block;
+}
+
+.nav-link {
+    padding: 5px 2px 1px;
+    margin: 0 3px 0;
+    cursor: pointer;
+
 }

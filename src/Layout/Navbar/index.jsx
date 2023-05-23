@@ -17,16 +17,23 @@ const Navbar = () => {
                         <span className="location">India</span>
                     </div>
 
-                    <div className="searchBar">
+                    <div className="searchBar d-flex">
+                        <span>All 	&#129171;</span>
                         <input type="search" placeholder="search" />
+                        <button type="submit" className="btn search"></button>
                     </div>
 
-                    <div className="cart">
+                    <div className="cart j-center">
                         <div className="cart-icon"></div>
                         <span className="cart-unit">0</span>
                     </div>
 
-                    <div className="user">
+                    <div className="cart j-center">
+                        <div className="cart-icon"></div>
+                        <span className="cart-unit">0</span>
+                    </div>
+
+                    <div className="user j-center">
 
                         <div className="user-details">
                             <p className="details">Hello, user</p>
