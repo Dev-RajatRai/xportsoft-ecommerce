@@ -1,5 +1,7 @@
 import React from "react";
-import logo from '../../Assets/Images/logo-white-2.png'
+import logo from '../../Assets/Images/logo-white-2.png';
+import user from '../../Assets/Images/user.png';
+import cart from '../../Assets/Images/cart.png';
 
 const Navbar = () => {
     return (
@@ -14,28 +16,34 @@ const Navbar = () => {
                     </div>
 
                     <div className="location">
-                        <span className="location">India</span>
+                        <span className="location">Haryana, India</span><br />
+                        <sub>Free Delivery Available.</sub>
                     </div>
 
                     <div className="searchBar d-flex">
-                        <span>All 	&#129171;</span>
+                        <span>All </span>
                         <input type="search" placeholder="search" />
                         <button type="submit" className="btn search"></button>
                     </div>
 
-                    <div className="cart j-center">
-                        <div className="cart-icon"></div>
-                        <span className="cart-unit">0</span>
+                    <div className="language-slector j-center">
+                        <span className="lang">EN</span>
+                        <div className="icon"></div>
                     </div>
 
-                    <div className="cart j-center">
-                        <div className="cart-icon"></div>
+                    <div className="cart j-center d-flex">
+                        <div className="icon">
+                            <img src={cart} alt="user" />
+                        </div>
                         <span className="cart-unit">0</span>
                     </div>
 
                     <div className="user j-center">
 
-                        <div className="user-details">
+                        <div className="user-details d-flex">
+                            <div className="icon">
+                                <img src={user} alt="user" />
+                            </div>
                             <p className="details">Hello, user</p>
                         </div>
 
@@ -51,7 +59,7 @@ const Navbar = () => {
                         <span></span>
                     </div>
 
-                    <div className="d-grid nav-links">
+                    <div className="nav-links">
 
                         <ul>
 
@@ -71,9 +79,20 @@ const Navbar = () => {
 
                             <li className="nav-link">Kids</li>
 
+                            <li className="nav-link">Foot Wear</li>
+
                             <li className="nav-link">Top Deals</li>
 
                         </ul>
+                    </div>
+
+                    <div className="fav-section d-grid">
+                        <div className="fav">
+                            <p>My Favorite</p>
+                        </div>
+                        <div className="deals ">
+                            <p>Today's Best Deals</p>
+                        </div>
                     </div>
                 </div>
             </section>
