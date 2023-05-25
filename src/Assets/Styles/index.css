@@ -124,11 +124,12 @@ nav::before {
     position: relative;
 }
 
+
 .cart .icon {
     position: absolute;
-    width: 62px;
+    width: 57px;
     z-index: 1111;
-    top: -32px;
+    top: -27px;
 }
 
 .icon {
@@ -136,10 +137,14 @@ nav::before {
 }
 
 span.cart-unit {
-    font-size: 2rem;
+    font-size: 1rem;
     position: absolute;
-    bottom: 0;
-    left: 17px;
+    bottom: 5px;
+    left: 13px;
+    background: #b18415;
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-weight: 600;
 }
 
 
