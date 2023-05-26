@@ -1,10 +1,10 @@
-import Navbar from "./Layout/Navbar";
 import './Assets/Styles/index.css'
+import Home from "./Pages/Home";
 
 
 function App() {
   return (
-    <Navbar />
+    <Home />
   );
 };
 
