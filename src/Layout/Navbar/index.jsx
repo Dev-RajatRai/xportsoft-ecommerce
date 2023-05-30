@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../Assets/Images/logo-white-2.png';
+import logo from '../../Assets/Images/logo-white.png';
 import user from '../../Assets/Images/user.png';
 import cart from '../../Assets/Images/cart.png';
 

@@ -1,13 +1,11 @@
-import Navbar from "./Layout/Navbar";
-import './Assets/Styles/index.css'
-import Card from "./Components/Cards";
+import './Assets/Styles/index.css';
+import Home from "./Pages/Home";
 
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Card />
+      <Home />
     </>
   );
 };

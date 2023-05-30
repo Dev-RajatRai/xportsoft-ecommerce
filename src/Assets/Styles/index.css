@@ -16,6 +16,19 @@ body {
     font-weight: 500px;
     font-family: 'EB Garamond',
         serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-track {
+    background: white;
 }
 
 :root {
@@ -58,6 +71,12 @@ img {
     cursor: pointer;
 }
 
+.container {
+    position: relative;
+    width: 99%;
+    margin: auto;
+}
+
 /*              NAVBAR COMPONENT         */
 
 
@@ -70,6 +89,7 @@ nav {
 .navbar {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1rem;
+    user-select: none;
 }
 
 nav::before {
@@ -80,13 +100,12 @@ nav::before {
     display: block;
 }
 
-
 /*         TOP NAVBAR        */
 .top-nav {
     padding: 12px 20px 12px;
     grid-template-columns: 13% 13% 50% 6% 6% 12%;
     position: relative;
-    z-index: 111;
+    z-index: 12;
 }
 
 .logo {
@@ -143,15 +162,17 @@ nav::before {
     background: white;
     height: 100%;
     border-radius: 7px;
-    padding: 0px 1px 0px 8px;
+    padding: 0px 0px 0px 3px;
+    -webkit-user-drag: element;
 }
 
 span.lang {
     background: white;
     color: black;
-    padding: 0 7px 0px 3px;
+    padding: 0 6px 0px 6px;
     border-radius: 7px;
     position: relative;
+    -webkit-user-drag: element;
 }
 
 .language-selector .icon {
@@ -163,9 +184,6 @@ span.lang {
     padding: 0px 4px 0;
 }
 
-span.lang {
-    color: black;
-}
 
 .cart {
     position: relative;
@@ -204,8 +222,8 @@ span.cart-unit {
     position: absolute;
     top: 16px;
     width: 100%;
-    z-index: -8;
-    animation: slideDown 0.4s forwards;
+    z-index: -1;
+    animation: slideDown 0.4s 0.3s forwards;
     grid-template-columns: 4% 77% 19%;
 }
 
@@ -273,11 +291,64 @@ li.nav-link::before {
     width: 100px;
 }
 
+/*              HEADER COMPONENT           */
+
+.header-bg {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.h-bg {
+    position: absolute;
+    width: 100%;
+    z-index: -11;
+    top: 3px;
+    height: 100vh;
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.4), transparent);
+}
+
+.h-bg:nth-child(1) {
+    background: no-repeat center top / 100% 95% url(../Images/header1.jpg);
+}
+
+.h-bg:nth-child(2) {
+    background: no-repeat center top / 100% 95% url(../Images/header2.jpg);
+}
+
+.h-bg:nth-child(3) {
+    background: no-repeat center top / 100% 95% url(../Images/header3.jpg);
+}
+
+.h-bg:nth-child(4) {
+    background: no-repeat center top / 100% 95% url(../Images/header4.jpg);
+}
+
+.header {
+    height: 300px;
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
+}
+
+/*                           CARD SECTION                                  */
+
+/*                           CARDS PRINTING                                 */
+#allCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+}
+
 /*                               Card styling                               */
 
 #card {
     background-color: #f2f2f2;
     width: 17vw;
+}
+
+.cardHeading {
+    margin: auto 70px;
+    font-weight: bold;
 }
 
 .cardProducts {
@@ -301,4 +372,71 @@ li.nav-link::before {
 .product-pic img:hover {
     transform: scale(1.5);
     transition: all 0.4s linear;
+}
+
+/*                          Slider                      */
+#Slider {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+.slides {
+    height: 350px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    overflow: hidden;
+}
+
+
+.slider-Heading {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: auto 24%;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(calc(-250px * 9));
+
+    }
+}
+
+.slider-image-container {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.slider-image-container img {
+    width: 100%;
+    transition: transform 1s;
+
+}
+
+.slider-image-container img:hover {
+    transform: translateZ(20px);
+}
+
+/*                           Demo Component                          */
+
+.demo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
